@@ -124,12 +124,10 @@ if (practiceBtn2) {
     // STUDENT CODE HERE:
     // 1. Use getElementById to select 'practice-html-1'
     // 2. Change its innerHTML to "<strong>Bold HTML</strong> and <em>italic text</em>"
-    
-    // Example solution (students should write this):
-    const practiceHtml1 = document.getElementById('practice-html-1');
-    if (practiceHtml1) {
-      practiceHtml1.innerHTML = "<strong>Bold HTML</strong> and <em>italic text</em>";
-      practiceHtml1.style.backgroundColor = "#fef3c7";
+        const practiceHtml1 = document.getElementById('practice-html-1');
+        if (practiceHtml1) {
+          practiceHtml1.innerHTML = "<strong>Bold HTML</strong> and <em>italic text</em>";
+          practiceHtml1.style.backgroundColor = "#fef3c7";
     }
     
     console.log("Exercise 3: Changed HTML with innerHTML");
@@ -150,7 +148,8 @@ if (practiceBtn3) {
     // 2. Change its color to "red"
     // 3. Change its fontSize to "24px"
     // 4. Change its backgroundColor to "lightblue"
-    
+
+
     // Example solution (students should write this):
     const practiceStyle1 = document.getElementById('practice-style-1');
     if (practiceStyle1) {
@@ -216,7 +215,7 @@ if (runDemo2) {
     }
     
     // Reset after 3 seconds
-    setTimeout(() => {
+    setTimeout((  ) => {  
       for (let i = 0; i < demoCards.length; i++) {
         demoCards[i].style.backgroundColor = "#fef3c7";
         demoCards[i].style.borderColor = "#f59e0b";
@@ -236,13 +235,23 @@ if (runDemo2) {
 // TODO: Students should complete this exercise
 const practiceBtn4 = document.getElementById('practice-btn-4');
 
-if (practiceBtn4) {
-  practiceBtn4.addEventListener('click', function() {
+if (practiceBtn4) { 
+  practiceBtn4.addEventListener('click', function() { 
     // STUDENT CODE HERE:
+const itemTexts = document.getElementsByClassName('item-text');
+    for (let i = 0; i < itemTexts.length; i++) {
+      itemTexts[i].textContent = `Updated Item ${i + 1}`;
+      itemTexts[i].style.color = "#10b981";
+      itemTexts[i].style.fontWeight = "bold";
+    }
+    
+    console.log("Exercise 2: Changed all items with textContent");
+  
+
     // 1. Use getElementsByClassName to select all 'item-text' elements
     // 2. Loop through the collection
     // 3. Change each element's textContent to "Updated Item"
-    
+
     // Example solution (students should write this):
     const itemTexts = document.getElementsByClassName('item-text');
     for (let i = 0; i < itemTexts.length; i++) {
@@ -264,10 +273,22 @@ const practiceBtn5 = document.getElementById('practice-btn-5');
 if (practiceBtn5) {
   practiceBtn5.addEventListener('click', function() {
     // STUDENT CODE HERE:
+const boxItems = document.getElementsByClassName('box-item');
+    for (let i = 0; i < boxItems.length; i++) {
+      boxItems[i].innerHTML = `<span style="color: #10b981; font-weight: bold;">Updated Box ${i + 1}!</span>`;
+      boxItems[i].style.backgroundColor = "#d1fae5";
+    }
+    
+    console.log("Exercise 3: Changed all boxes with innerHTML");
+  
+
     // 1. Use getElementsByClassName to select all 'box-item' elements
     // 2. Loop through the collection
     // 3. Change each element's innerHTML to "<span style='color: green;'>Updated!</span>"
-    
+        const boxItems = document.getElementsByClassName('box-item');
+    for (let i = 0; i < boxItems.length; i++) {
+      boxItems[i].innerHTML = `<span style="color: #10b981; font-weight: bold;">Updated Box ${i + 1}!</span>`;
+
     // Example solution (students should write this):
     const boxItems = document.getElementsByClassName('box-item');
     for (let i = 0; i < boxItems.length; i++) {
@@ -293,6 +314,7 @@ if (practiceBtn6) {
     // 3. Change each element's backgroundColor to "lightblue"
     // 4. Change each element's color to "darkblue"
     
+
     // Example solution (students should write this):
     const colorBoxes = document.getElementsByClassName('color-box');
     for (let i = 0; i < colorBoxes.length; i++) {
@@ -327,6 +349,8 @@ SELECTOR EXAMPLES:
 - 'div' - selects by tag name
 - 'div.product-card' - selects div with class product-card
 */
+
+
 
 // ============================================
 // EXERCISE 1: DEMO - Shows how querySelector works
@@ -454,7 +478,14 @@ if (practiceBtn7) {
     // 1. Use querySelector('#target-id') to select the element
     // 2. Change its textContent to "Selected with querySelector!"
     // 3. Change its style
-    
+
+      const targetElement = document.querySelector('#target-id');
+      if (targetElement) {
+        targetElement.textContent = "Selected with querySelector!";
+        targetElement.style.backgroundColor = "#dbeafe";
+        targetElement.style.borderColor = "#3b82f6";
+        targetElement.style.color = "#1e40af";
+      }
     // Example solution (students should write this):
     const targetElement = document.querySelector('#target-id');
     if (targetElement) {
@@ -477,10 +508,22 @@ const practiceBtn8 = document.getElementById('practice-btn-8');
 if (practiceBtn8) {
   practiceBtn8.addEventListener('click', function() {
     // STUDENT CODE HERE:
+
+
     // 1. Use querySelector('.target-class') to select the FIRST element
     // 2. Change its innerHTML to "<strong>First item selected!</strong>"
     // 3. Change its style
+     const firstTarget = document.querySelector('.target-class');
+    if (firstTarget) {
+      firstTarget.innerHTML = "<strong>First item selected!</strong>";
+      firstTarget.style.backgroundColor = "#dbeafe";
+      firstTarget.style.borderColor = "#3b82f6";
+    }
     
+    console.log("Exercise 3: Selected first by class with querySelector");
+  
+
+     
     // Example solution (students should write this):
     const firstTarget = document.querySelector('.target-class');
     if (firstTarget) {
@@ -498,18 +541,16 @@ if (practiceBtn8) {
 // ============================================
 // TODO: Students should complete this exercise
 const practiceBtn9 = document.getElementById('practice-btn-9');
-
+ 
 if (practiceBtn9) {
   practiceBtn9.addEventListener('click', function() {
     // STUDENT CODE HERE:
     // 1. Use querySelector('div.special') to select the FIRST div with class special
     // 2. Change its textContent and style
-    
-    // Example solution (students should write this):
-    const specialDiv = document.querySelector('div.special');
-    if (specialDiv) {
-      specialDiv.textContent = "This div was selected with 'div.special'!";
-      specialDiv.style.backgroundColor = "#fef3c7";
+      const specialDiv = document.querySelector('div.special');
+      if (specialDiv) {
+        specialDiv.textContent = "This div was selected with 'div.special'!";
+        specialDiv.style.backgroundColor = "#fef3c7";
       specialDiv.style.borderColor = "#f59e0b";
       specialDiv.style.fontWeight = "bold";
     }
